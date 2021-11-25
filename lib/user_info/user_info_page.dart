@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:github_user_search/user_info/user_info_controller.dart';
 import 'package:github_user_search/user_search/user_model.dart';
 
@@ -31,7 +32,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
   initState() {
     super.initState();
 
-    controller = UserInfoController();
+    controller = GetIt.I.get();
 
     controller.fetchUserInfo(widget.args.model.id).then((value) {
       setState(() {});

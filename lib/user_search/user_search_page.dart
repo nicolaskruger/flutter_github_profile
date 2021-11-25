@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:github_user_search/user_search/user_search_controller.dart';
 
 import 'package:github_user_search/user_search/user_list_item.dart';
@@ -30,7 +31,7 @@ class _UserSearchPageState extends State<UserSearchPage> {
   initState() {
     super.initState();
 
-    controller = UserSearchController();
+    controller = GetIt.I.get();
   }
 
   @override
